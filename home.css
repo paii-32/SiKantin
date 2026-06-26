@@ -1,0 +1,1103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgba(255, 255, 255, 0.7);
+} 
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: #FAFAFA;
+    padding: 40px 30px;
+    border-right: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: -20px -20px 20px;
+}
+
+.logo h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #C78A1D;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.card-side {
+    border-radius: 20px;
+    transition: 0.3s;
+    margin: 10px -20px;
+}
+
+
+.card-side a {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 18px;
+    text-decoration: none;
+    color: #555;
+
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.cart-count{
+    margin-left:auto;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#b30505;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+
+.sidebar h2 {
+    padding-bottom: 30px;
+}
+
+.card-side ion-icon,
+.LogOut ion-icon {
+    font-size: 25px;
+}
+
+.card-side.active a {
+    background: #ffe5e5;
+    color: rgb(179, 5, 5);
+}
+
+.card-side.active ion-icon {
+    color: rgb(179, 5, 5);
+}
+
+.card-side.active a {
+    background: #ffe5e5;
+    color: rgb(179, 5, 5);
+}
+
+.card-side.active ion-icon {
+    color: rgb(179, 5, 5);
+}
+
+.LogOut a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: rgb(179, 5, 5);
+    text-decoration: none;
+    gap: 18px;
+}
+
+.LogOut {
+    margin-top: auto;
+}
+
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    width: calc(100% - 260px);
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-navbar {
+    border: 1.5px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    width: 430px;
+}
+
+.input-navbar:focus {
+    outline:none;
+    border-color:rgb(179,5,5);
+    box-shadow:0 0 10px rgba(179,5,5,.2);
+}
+
+
+.notif-wrapper{
+    position:relative;
+}
+
+#notif-btn{
+    cursor:pointer;
+}
+
+.notif-badge{
+
+    position:absolute;
+
+    top:-5px;
+    right:-8px;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:red;
+    color:white;
+
+    font-size:11px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.notif-popup{
+
+    position:absolute;
+
+    top:50px;
+    right:0;
+
+    width:320px;
+
+    max-height:400px;
+
+    overflow-y:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+    display:none;
+
+    z-index:999;
+}
+
+.notif-popup.show{
+    display:block;
+}
+
+.notif-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.notif-header button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.notif-header button:hover {
+    background: darkred;
+}
+
+.notif-item{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.notif-item:last-child{
+    border-bottom:none;
+}
+
+.notif-item h4{
+    font-size:14px;
+}
+
+.notif-item p{
+
+    font-size:12px;
+
+    color:#888;
+
+    margin-top:5px;
+}
+
+
+
+.nav-2-1 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-2-1 ion-icon {
+    font-size: 30px;
+    color: #555;
+}
+
+.nav-2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: #ffe5e5;
+    padding: 7px;
+    width: 150px;
+}
+
+.nav-2 ion-icon {
+    color: rgb(179, 5, 5);
+}
+
+
+.nav-2-p1 {
+    font-family: Arial;
+    font-size: 14px;
+    color: rgb(179, 5, 5);
+    font-weight: bold;
+}
+
+.nav-2-p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: rgb(179, 5, 5);
+}
+
+
+
+
+/* content */
+
+.content {
+    margin-left: 260px;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+.banner-slider{
+    width:100%;
+    overflow:hidden;
+    border-radius:20px;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    transition:0.5s ease;
+}
+
+.slides img{
+    width:100%;
+    height: 300px;
+    flex-shrink:0;
+    border-radius:20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.dots{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+}
+
+.dot.active{
+    background:white;
+}
+
+
+
+.container-menu {
+    scroll-margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.h2-kat-men {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0 0;
+}
+
+.input-menu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    align-items: center;
+    margin: 30px 0;
+}
+
+
+.label-menu{
+    background-color: white;
+    color: rgb(199, 15, 15);
+    border: 1.5px solid rgb(199, 15, 15);
+    border-radius: 50px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.container-MenuSaldo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.semua,
+.makanan,
+.minuman {
+    display: none;
+}
+
+
+.kwt-semua,
+.ket-makanan,
+.ket-minuman {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ket-makanan,
+.ket-minuman,
+.ket-semua {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 546;
+}
+
+#s:checked ~ .menu .label-menu[for="s"],
+#m:checked ~ .menu .label-menu[for="m"],
+#mi:checked ~ .menu .label-menu[for="mi"]{
+    background-color: rgb(199, 15, 15);
+    color: white;
+    border-color: rgb(199, 15, 15);
+}
+
+
+#s:checked ~ .semua {
+    display: block;
+}
+
+#m:checked ~ .makanan {
+    display: block;
+}
+
+#mi:checked ~ .minuman {
+    display: block;
+}
+
+
+
+
+.container-card-menu {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.card-menu {
+    position: relative;
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-menu:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+
+.card-menu img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+.harga-keranjang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.nama-menu {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.harga {
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: rgb(179, 5, 5);
+}
+
+.keranjang {
+    border: none;
+    cursor: pointer;
+    border-radius: 13px;
+    width: 40px;
+    background-color: rgb(179, 5, 5);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.keranjang:hover {
+    background-color: rgb(122, 3, 3);
+}
+
+
+#pesanan-container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+
+/* paket-hemat */
+
+.paket-hemat h2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container-paket-hemat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.card-paket-hemat {
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-paket-hemat img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.nama-menu-paket {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nama-menu-paket,
+.harga-keranjang-paket {
+    padding-top: 9px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.harga-keranjang-paket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.border-hemat {
+    border-radius: 50px;
+    background-color: #dcc620;
+    color: #b30505;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 4px;
+    text-align: center;
+    width: 80px;
+    font-weight: bold;
+}
+
+.btn-pakethemat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.btn-pakethemat button{
+    width: 280px;
+    height: 35px;
+    font-size: 15px;
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #FAFAFA;
+    margin-left: 260px;
+}
+
+.footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.footer-p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+.footer span {
+    color: rgb(185, 5, 5);
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1024px) {
+    .navbar-mobile {
+        display: none;
+    }
+
+    .slides-mobile {
+        display: none;
+    }
+
+    .dots-mobile {
+        display: none;
+    }
+
+    .dot-mobile {
+        display: none;
+    }
+
+    .bottom-nav {
+        display: none;
+    }
+
+    .card-side-1 {
+        display: none;
+    }
+
+
+    .nama-menu,
+    .harga-keranjang {
+        padding:8px;
+    }
+
+
+
+
+
+    .header h1 {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+    .card-saldo-mobile {
+        display: none;
+    }
+
+    .container-saldo-mobile {
+        display: none;
+    }
+}
+
+
+
+
+
+/* device hp */
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    nav {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        padding: 10px 20px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+    }
+
+    .logo-mobile {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nama-logo-mobile-nav {
+        color: #C78A1D;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .logo-mobile img {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+    }
+
+
+    .input-navbar {
+        width: 250px;
+        border: 1.5px solid rgb(179, 5, 5);
+    }
+
+    .input-navbar:focus {
+        outline:none;
+        border-color: rgb(122, 3, 3);
+        box-shadow:0 0 10px rgba(179,5,5,.2);
+    }
+
+    .content {
+        margin-top: 70px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    /* benner */
+
+    .banner-slider{
+        width:100%;
+        overflow:hidden;
+        border-radius:20px;
+        position:relative;
+    }
+
+    .slides {
+        display: none;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    .slides-mobile {
+        display: flex;
+        margin: 0 auto;
+        transition:0.5s ease;
+    }
+
+    .slides-mobile img{
+        width: 100%;
+        height: 210px;
+        flex-shrink:0;
+        border-radius:20px;
+        object-fit: cover;
+    }
+
+.dots-mobile{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.dot-mobile{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+}
+
+.dot-mobile.active{
+    background:white;
+}
+
+.container-saldo-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-saldo-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 22px;
+    background-color: #b30505;
+    padding: 20px 30px;
+    margin-top: 20px;
+    width: 396px;
+}
+
+.saldo-mobile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.saldo-mobile ion-icon {
+    color: white;
+    font-size: 40px;
+} 
+
+
+.card-side-saldo {
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .card-side-saldo a {
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 100px;
+        text-decoration: none;
+        color: rgb(179,5,5);
+        font-weight: bold;
+        background-color: white;
+        border-radius: 15px;
+        transition: 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
+.nav-2-p1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-2-p2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    ;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+
+
+
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+
+    .container-card-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+    .card-menu:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+
+
+    .label-menu{
+        background-color: white;
+        color: rgb(199, 15, 15);
+        border: 1.5px solid rgb(199, 15, 15);
+        border-radius: 50px;
+        padding: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        gap: 5px;
+    }
+
+
+
+    .bottom-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        gap: 60px;
+        position: fixed;
+        z-index: 99;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+    .card-side {
+        border-radius: 20px;
+        transition: 0.3s;
+        
+    }
+
+    .card-side a {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 45px;
+        text-decoration: none;
+        color: #555;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .card-side-1{
+        position: relative;
+        top: -20px;
+    }
+
+    .card-side-1 a{
+        width: 55px;
+        height: 55px;
+        background: #c70f0f;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    }
+
+    .cart-count{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        border: 2px solid white;
+    }
+
+    .card-side-1 ion-icon{
+        font-size: 28px;
+    }
+
+    .card-side ion-icon{
+        font-size: 28px;
+    }
+
+    .card-side ion-icon,
+    .LogOut ion-icon {
+        font-size: 25px;
+    }
+
+
+    .nama-menu,
+    .harga-keranjang {
+        padding-left: 10px;
+    }
+
+    .harga-keranjang {
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    .card-menu img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+
+
+
+    .container-paket-hemat {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .card-paket-hemat img {
+        height: 230px;
+    }
+
+    .nama-menu-paket {
+        font-size: 21px;
+    }
+
+    .harga {
+        font-size: 19px;
+    }
+
+    .border-hemat {
+        width: 55px;
+        font-size: 11px;
+    }
+
+    .btn-pakethemat {
+        margin: 10px;
+    }
+
+    .btn-pakethemat button {
+        width: 100%;
+        height: 38px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+
+    #pesanan-container {
+    width: 350px;
+    margin: 0 auto;
+}
+
+
+
+    .footer {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border-top: 1.5px solid #ccc;
+        background-color: #FAFAFA;
+        margin-bottom: 100px;
+    }
+
+    .footer-mobile img {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        align-items: center;
+    }
+
+    .footer-p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+    }
+
+    .footer-mobile  span {
+        color: rgb(185, 5, 5);
+    }
+}

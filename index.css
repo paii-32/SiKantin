@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.container-login {
+    min-height: 100vh;
+    margin: 30px;
+    
+}
+
+.card-login {
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 30px;
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.logo-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-login img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+
+
+
+
+
+.SiKantin {
+    text-align: center;
+    
+    color: #C78A1D;
+    font-size: 40px;
+}
+
+.p-sikantin {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+
+.slmt-dtng {
+    margin-top: 20px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1f1f1f;
+    font-size: 24px;
+}
+
+.p-slmt {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    gap: 30px;
+}
+
+.email p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+}
+
+.email input {
+    border: 1px solid rgb(218, 170, 170);
+    border-radius: 10px;
+    padding:12px 45px 12px 45px;
+    width: 350px;
+}
+
+.email-1,
+.password-1 {
+    position: relative;
+}
+
+.email-1 ion-icon,
+.password-1 ion-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #888;
+    font-size: 20px;
+}
+
+
+.email input:focus,
+.password input:focus {
+    outline: none;
+    border: 1.5px solid rgb(185, 5, 5);
+}
+
+.password-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.password p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+}
+
+.password input {
+    border: 1px solid rgb(218, 170, 170);
+    border-radius: 10px;
+    padding:12px 45px 12px 45px;
+    width: 350px;
+}
+
+.password-1 .eye{
+    position:absolute;
+    right:15px;
+    left:auto;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+.eye{
+    cursor:pointer;
+    font-size:22px;
+    color:#888;
+}
+
+.btn-login button {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    width: 350px;
+    background-color: rgb(184, 3, 3);
+    cursor: pointer;
+}
+
+.btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.btn-text ion-icon {
+    font-size: 25px;
+}
+
+footer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.footer-p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+}
+
+footer span {
+    color: rgb(185, 5, 5);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .container-login {
+    min-height: 100vh;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 30px;
+    position: relative;
+    width: 370px;
+}
+
+.logo-login {
+    position: absolute;
+    top: -60px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 99;
+}
+
+.logo-login img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.SiKantin {
+    text-align: center;
+    margin: 35px 0 5px;
+    color: #C78A1D;
+    font-size: 40px;
+}
+
+.p-sikantin {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+
+.slmt-dtng {
+    margin-top: 20px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1f1f1f;
+    font-size: 24px;
+}
+
+.p-slmt {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: grey;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    gap: 30px;
+}
+
+.email p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+}
+
+.email input {
+    border: 1px solid rgb(218, 170, 170);
+    border-radius: 10px;
+    padding:12px 45px 12px 45px;
+    width: 320px;
+}
+
+.email-1,
+.password-1 {
+    position: relative;
+}
+
+.email-1 ion-icon,
+.password-1 ion-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #888;
+    font-size: 20px;
+}
+
+
+.email input:focus,
+.password input:focus {
+    outline: none;
+    border: 1.5px solid rgb(185, 5, 5);
+}
+
+.password-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.password p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+}
+
+.password input {
+    border: 1px solid rgb(218, 170, 170);
+    border-radius: 10px;
+    padding:12px 45px 12px 45px;
+    width: 320px;
+}
+
+.password-1 .eye{
+    position:absolute;
+    right:15px;
+    left:auto;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+.eye{
+    cursor:pointer;
+    font-size:22px;
+    color:#888;
+}
+
+.btn-login button {
+    border-radius: 10px;
+    border: none;
+    padding: 12px;
+    width: 320px;
+    background-color: rgb(184, 3, 3);
+    cursor: pointer;
+}
+
+.btn-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.btn-text ion-icon {
+    font-size: 25px;
+}
+}

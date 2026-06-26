@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Saldo - SiKantin</title>
+
+    <link rel="stylesheet" href="topup.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="icon" type="image/png" href="foto/logo-login.png">
+</head>
+<body>
+        <div class="container">
+        
+            <h1>Top Up Saldo</h1>
+        
+            <div class="saldo-card">
+            
+                <p>Saldo Saat Ini</p>
+            
+                <h2 id="saldo-sekarang">
+                    Rp 0
+                </h2>
+            
+            </div>
+        
+            <div class="nominal-list">
+            
+                <button onclick="pilihNominal(10000)">
+                    Rp 10.000
+                </button>
+            
+                <button onclick="pilihNominal(20000)">
+                    Rp 20.000
+                </button>
+            
+                <button onclick="pilihNominal(50000)">
+                    Rp 50.000
+                </button>
+            
+                <button onclick="pilihNominal(100000)">
+                    Rp 100.000
+                </button>
+            
+            </div>
+        
+            <input
+                type="text"
+                id="nominal"
+                placeholder="Masukkan nominal top up">
+        
+            <button
+                class="btn-topup"
+                onclick="topup()">
+        
+                Konfirmasi Top Up
+        
+            </button>
+        
+        </div>
+
+    <script src="topup.js"></script>
+</body>
+</html>

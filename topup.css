@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    max-width:600px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.saldo-card{
+    background:#ffe5e5;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.saldo-card h2{
+    color:rgb(179,5,5);
+    margin-top:10px;
+}
+
+.nominal-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:30px 0;
+}
+
+.nominal-list button{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    background:#f2f2f2;
+    font-weight:bold;
+}
+
+.nominal-list button:hover{
+    background:#ffe5e5;
+}
+
+#nominal{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:12px;
+}
+
+.btn-topup{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:rgb(179,5,5);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn-topup:hover{
+    background:rgb(130,0,0);
+}

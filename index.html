@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiKantin</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="foto/logo-login.png">
+</head>
+<body>
+    <div class="container-login">
+
+            <div class="logo-login">
+                <img src="foto/logo-login.png" alt="">
+            </div>
+
+            <div class="text-login">
+
+                <h1 class="SiKantin">SiKantin</h1>
+                <p class="p-sikantin">PLATFORM KANTIN SEKOLAH DIGITAL</p>
+            </div>
+
+            <div class="card-login">
+                <h1 class="slmt-dtng">Selamat Datang!</h1>
+
+                <p class="p-slmt">Silahkan masuk ke akun SiKantin untuk melanjutkan</p>
+
+            <div class="input-login">
+                <form action="home.html">
+                    <div class="email">
+                        <p>Email</p>
+                        <div class="email-1">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" placeholder="Masukan Email mu.."
+                            pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
+title="Gunakan email Gmail" required>
+                        </div>
+                    </div>
+                    <div class="password">
+                        <p>Password</p>
+                        <div class="password-1">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input id="password" type="password"
+                            placeholder="Masukan password kamu" required>
+
+                            <ion-icon id="togglePassword" class="eye" name="eye-outline"></ion-icon>
+
+                        </div>
+                    </div>
+                    <div class="btn-login">
+                        <button type="submit">
+                            <div class="btn-text">
+                                <p>Masuk </p>
+                                <ion-icon name="log-in-outline"></ion-icon>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <img src="foto/logo-login.png" alt="">
+        <p class="footer-p">SiKantin<span>.id</span></p>
+    </footer>
+
+
+    <script>
+        const password = document.getElementById("password");
+        const toggle = document.getElementById("togglePassword");
+
+        toggle.addEventListener("click", () => {
+
+            if(password.type === "password"){
+                
+                password.type = "text";
+
+                    toggle.setAttribute(
+                        "name",
+                        "eye-off-outline"
+                    );
+                }
+
+            else{password.type = "password";
+
+                    toggle.setAttribute(
+                        "name",
+                        "eye-outline"
+                    );
+                }
+
+        });
+
+
+        // card login
+        const card = document.querySelector(".card-login");
+
+card.addEventListener("click", () => {
+    card.classList.toggle("active");
+});
+        
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Keranjang - SiKantin</title>
+
+    <link rel="stylesheet" href="keranjang.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="foto/logo-login.png">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Keranjang Saya</h1>
+
+        <a href="home.html">
+            <i class="fa-solid fa-arrow-left"></i>
+            Kembali
+        </a>
+    </div>
+
+    <div id="cart-list">
+
+    </div>
+
+    <div class="summary">
+
+        <div class="saldo-box">
+            <span>Saldo Anda</span>
+            <h2 id="saldo">
+                Rp 0
+            </h2>
+        </div>
+
+        <div class="total-box">
+
+            <div>
+                <span>Total Belanja</span>
+                <h2 id="total">
+                    Rp 0
+                </h2>
+            </div>
+
+        </div>
+
+        <div class="payment-method">
+
+            <h3>Metode Pembayaran</h3>
+
+            <label>
+                <input
+                type="radio"
+                name="payment"
+                value="saldo"
+                checked>
+
+                Saldo SiKantin
+            </label>
+
+            <label>
+                <input
+                type="radio"
+                name="payment"
+                value="cod">
+
+                Bayar di Kantin (COD)
+            </label>
+
+        </div>
+
+        <button
+        class="checkout-btn"
+        onclick="prosesCheckout()">
+
+            Checkout Sekarang
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script src="keranjang.js"></script>
+
+</body>
+</html>

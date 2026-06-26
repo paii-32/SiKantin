@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SiKantin</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="foto/logo-login.png">
+</head>
+<body>
+
+    <!-- navbar dan bottom bar device hp -->
+    <div class="navbar-mobile">
+        <div class="logo-mobile">
+            <img src="foto/logo-01.png" alt="">
+        </div>
+
+        <input class="input-navbar search-menu" type="text" placeholder="Cari makanan atau minuman...">
+
+            <div class="nav-2-1">
+
+                <div class="notif-wrapper">
+
+                    <ion-icon
+                    class="notif-btn"
+                    name="notifications-outline">
+                    </ion-icon>
+                
+                    <span class="notif-badge">
+                        0
+                    </span>
+                
+                    <div class="notif-popup">
+                    
+                        <div class="notif-header">
+                            <h3>Notifikasi</h3>
+                            <button onclick="hapusSemuaNotif()">
+                                Bersihkan
+                            </button>
+                        </div>
+
+                        <div class="notif-list"></div>
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- sidebar dan navbar device laptop -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="foto/logo-01.png" alt="">
+            <h2>SiKantin</h2>
+        </div>
+        <div>
+            <div class="card-side active">
+                <a href="#home">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <p>Beranda</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="#menu">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                    <p>Menu</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="keranjang.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <p>Keranjang</p>
+                
+                    <span class="cart-count">
+                        0
+                    </span>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="pesanan.html">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    <p>Pesanan Saya</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="riwayat.html">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <p>Riwayat Pesanan</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="topup.html">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <p>Top Up Saldo</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="LogOut">
+            <a href="index.html">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <p>Logout</p>
+            </a>
+        </div>
+    </div>
+
+    <nav>
+            <input class="input-navbar search-menu" type="text" placeholder="Cari makanan atau minuman...">
+
+            <div class="nav-2-1">
+
+                <div class="notif-wrapper">
+
+                    <ion-icon
+                    class="notif-btn"
+                    name="notifications-outline">
+                    </ion-icon>
+                
+                    <span class="notif-badge">
+                        0
+                    </span>
+                
+                    <div class="notif-popup">
+                    
+                        <div class="notif-header">
+                            <h3>Notifikasi</h3>
+                            <button onclick="hapusSemuaNotif()">
+                                Bersihkan
+                            </button>
+                        </div>
+
+                        <div class="notif-list"></div>
+                    
+                    </div>
+                
+                </div>
+
+
+                <div class="nav-2">
+
+                    <ion-icon name="wallet-outline"></ion-icon>
+
+                    <div>
+                        <p class="nav-2-p2">Saldo</p>
+                        <p class="nav-2-p1">Rp 0 </p>
+                    </div>
+                    
+                </div>
+            </div>
+    </nav>
+
+
+    <div class="content">
+        <div id="home" class="banner-slider">
+    
+            <div class="slides">
+                <img src="foto/benner001.png" alt="">
+                <img src="foto/benner002.png" alt="">
+                <img src="foto/banner-pakethemat-01.png" alt="">
+            </div>
+
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <div class="slides-mobile">
+                <img src="foto/benner1.png" alt="">
+                <img src="foto/benner2.png" alt="">
+                <img src="foto/banner-paket-hemat-1.png" alt="">
+            </div>
+        
+            <div class="dots-mobile">
+                <span class="dot-mobile active"></span>
+                <span class="dot-mobile"></span>
+                <span class="dot-mobile"></span>
+            </div>
+    
+        </div>
+
+        <div class="container-saldo-mobile">
+            <div class="card-saldo-mobile">
+                <div class="saldo-mobile">
+                    <ion-icon name="wallet-outline"></ion-icon>
+                    <div>
+                        <p class="nav-2-p2">Saldo</p>
+                        <p class="nav-2-p1">Rp 0 </p>
+                    </div>
+                </div>
+
+                <div class="card-side-saldo">
+                <a href="topup.html">
+                    <p>+ Top Up</p>
+                </a>
+            </div>
+            </div>
+        </div>
+
+
+    <div id="menu" class="container-menu">
+
+        
+        <h2 class="h2-kat-men">Kategori Menu</h2>
+
+        <input class="input-menu" type="radio" name="tab" id="s" checked>
+        <input class="input-menu" type="radio" name="tab" id="m">
+        <input class="input-menu" type="radio" name="tab" id="mi">
+        
+        <div class="menu">
+
+            <label class="label-menu" for="s">
+                <ion-icon name="fast-food-outline"></ion-icon> Semua
+            </label>
+            <label class="label-menu" for="m">
+                <i class="fa-solid fa-utensils"></i> Makanan
+            </label>
+            <label class="label-menu" for="mi">
+                <i class="fa-solid fa-glass-water"></i> Minuman
+            </label>
+
+        </div>
+
+
+        <div class="semua">
+
+            <p class="ket-semua">Semua</p>
+
+            <div class="container-card-menu">
+
+                <div class="card-menu">
+                    <img src="foto/nasi-goreng-1.png" alt="">
+
+                    <p class="nama-menu">
+                        Nasi Goreng
+                    </p>
+
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 15.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Nasi Goreng"
+                            data-harga="15000"
+                            data-gambar="foto/nasi-goreng-1.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/ayam-geprek.png" alt="">
+
+                    <p class="nama-menu">
+                        Nasi Ayam Geprek
+                    </p>
+
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 18.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Nasi Ayam Geprek"
+                            data-harga="18000"
+                            data-gambar="foto/ayam-geprek.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/kebab.png" alt="">
+                    <p class="nama-menu">
+                        Kebab
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 10.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Kebab"
+                            data-harga="10000"
+                            data-gambar="foto/kebab.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/es-teh-1.png" alt="">
+                    <p class="nama-menu">
+                        Es Teh
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 5.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="ES Teh"
+                            data-harga="5000"
+                            data-gambar="foto/es-teh-1.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/dimsum-001.png" alt="">
+                    <p class="nama-menu">
+                        Dimsum
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 20.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Dimsum"
+                            data-harga="20000"
+                            data-gambar="foto/dimsum-001.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/mie-jebew.png" alt="">
+                    <p class="nama-menu">
+                        Mie Jebew
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 15.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Mie Jebew"
+                            data-harga="15000"
+                            data-gambar="foto/mie-jebew.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="card-menu">
+                    <img src="foto/es-coklat.png" alt="">
+                    <p class="nama-menu">
+                        Es Coklat
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 12.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Es Coklat"
+                            data-harga="15000"
+                            data-gambar="foto/es-coklat.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/air-putih.png" alt="">
+                    <p class="nama-menu">
+                        Air Putih
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 5.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Air Putih"
+                            data-harga="5000"
+                            data-gambar="foto/air-putih.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="makanan">
+
+            <p class="ket-makanan">Makanan</p>
+
+            <div class="container-card-menu">
+
+                <div class="card-menu">
+                    <img src="foto/nasi-goreng-1.png" alt="">
+                    <p class="nama-menu">
+                        Nasi Goreng
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 15.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Nasi Goreng"
+                            data-harga="15000"
+                            data-gambar="foto/nasi-goreng.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/ayam-geprek.png" alt="">
+
+                    <p class="nama-menu">
+                        Nasi Ayam Geprek
+                    </p>
+
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 18.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Nasi Goreng"
+                            data-harga="18000"
+                            data-gambar="foto/ayam-geprek.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/kebab.png" alt="">
+                    <p class="nama-menu">
+                        Kebab
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 10.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Kebab"
+                            data-harga="10000"
+                            data-gambar="foto/kebab.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="card-menu">
+                    <img src="foto/dimsum-001.png" alt="">
+                    <p class="nama-menu">
+                        Dimsum
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 20.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Dimsum"
+                            data-harga="20000"
+                            data-gambar="foto/dimsum-001.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/mie-jebew.png" alt="">
+                    <p class="nama-menu">
+                        Mie Jebew
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 15.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Mi Jebwe"
+                            data-harga="15000"
+                            data-gambar="foto/mie-jebew.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="minuman">
+
+            <p class="ket-minuman">Minuman</p>
+
+            <div class="container-card-menu">
+                <div class="card-menu">
+                    <img src="foto/es-teh-1.png" alt="">
+                    <p class="nama-menu">
+                        Es Teh
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 5.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Es Teh"
+                            data-harga="5000"
+                            data-gambar="foto/es-teh.jpeg">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/es-coklat.png" alt="">
+                    <p class="nama-menu">
+                        Es Coklat
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 12.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Es Coklat"
+                            data-harga="15000"
+                            data-gambar="foto/es-coklat.png">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card-menu">
+                    <img src="foto/air-putih.png" alt="">
+                    <p class="nama-menu">
+                        Air Putih
+                    </p>
+                    <div class="harga-keranjang">
+                        <p class="harga">Rp 5.000</p>
+                        <button
+                            class="keranjang"
+                            data-nama="Air Putih"
+                            data-harga="5000"
+                            data-gambar="foto/air-putih.png">
+                            +
+                        </button>
+                    </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="paket-hemat">
+        <h2>Paket Hemat</h2>
+
+        <div class="container-paket-hemat">
+
+            <div class="card-paket-hemat">
+                    <img src="foto/menu-paket-1.png" alt="">
+                    <p class="nama-menu-paket">
+                        Nasi Goreng + Es Teh
+                    </p>
+                    <div class="harga-keranjang-paket">
+                        <p class="harga">Rp 18.000</p>
+
+                        <div class="border-hemat">
+                            <p>Hemat!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="btn-pakethemat">
+                        <button
+                                class="keranjang"
+                                data-nama="Paket Nasi Goreng + Es Teh"
+                                data-harga="18000"
+                                data-gambar="foto/menu-paket-1.png">
+                                + Tambah ke keranjang
+                        </button>
+                    </div>
+            </div>
+
+
+            <div class="card-paket-hemat">
+                    <img src="foto/menu-paket-2.png" alt="">
+                    <p class="nama-menu-paket">
+                        Nasi Ayam Geprek + Es Teh
+                    </p>
+                    <div class="harga-keranjang-paket">
+                        <p class="harga">Rp 22.000</p>
+
+                        <div class="border-hemat">
+                            <p>Hemat!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="btn-pakethemat">
+                        <button
+                                class="keranjang"
+                                data-nama="Paket Nasi Ayam Geprek + Es Teh"
+                                data-harga="22000"
+                                data-gambar="foto/menu-paket-2.png">
+                                + Tambah ke keranjang
+                        </button>
+                    </div>
+            </div>
+
+
+            <div class="card-paket-hemat">
+                    <img src="foto/menu-paket-3.png" alt="">
+                    <p class="nama-menu-paket">
+                        Mie Jebew + Es Teh
+                    </p>
+                    <div class="harga-keranjang-paket">
+                        <p class="harga">Rp 18.000</p>
+
+                        <div class="border-hemat">
+                            <p>Hemat!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="btn-pakethemat">
+                        <button
+                                class="keranjang"
+                                data-nama="Paket Mie Jebew + Es Teh"
+                                data-harga="18000"
+                                data-gambar="foto/menu-paket-3.png">
+                                + Tambah ke keranjang
+                        </button>
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="bottom-nav">
+        <div class="card-side active">
+            <a href="#home">
+                <ion-icon name="home-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side">
+            <a href="#menu">
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side-1">
+            <a href="keranjang.html">
+                <ion-icon name="cart-outline"></ion-icon>
+
+                <span class="cart-count">
+                    0
+                </span>
+            </a>
+        </div>
+
+        <div class="card-side">
+            <a href="pesanan.html">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side">
+            <a href="riwayat.html">
+                <ion-icon name="time-outline"></ion-icon>
+            </a>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- div penutup content -->
+    </div>
+
+    <footer class="footer">
+        <img src="foto/logo-login.png" alt="">
+        <p class="footer-p">SiKantin<span>.id</span></p>
+    </footer>
+
+    <footer class="footer-mobile">
+        <img src="foto/logo-login.png" alt="">
+        <p class="footer-p">SiKantin<span>.id</span></p>
+    </footer>
+
+
+
+
+    <script src="home.js"></script>
+    <script src="app.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

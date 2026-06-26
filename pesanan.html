@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pesanan Saya - SiKantin</title>
+
+    <link rel="stylesheet" href="pesanan.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/png" href="foto/logo-login.png">
+</head>
+<body>
+
+    <div class="navbar-mobile">
+        <div class="logo-mobile">
+            <img src="foto/logo-login.png" alt="">
+            <p class="nama-logo-mobile-nav">SiKantin</p>
+        </div>
+        
+            <div class="nav-2-1">
+
+                <div class="notif-wrapper">
+
+                    <ion-icon
+                    class="notif-btn"
+                    name="notifications-outline">
+                    </ion-icon>
+                
+                    <span class="notif-badge">
+                        0
+                    </span>
+                
+                    <div class="notif-popup">
+                    
+                        <div class="notif-header">
+                            <h3>Notifikasi</h3>
+                            <button onclick="hapusSemuaNotif()">
+                                Bersihkan
+                            </button>
+                        </div>
+
+                        <div class="notif-list"></div>
+                    
+                    </div>
+                
+                </div>
+
+            </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="logo">
+            <img src="foto/logo-01.png" alt="">
+            <h2>SiKantin</h2>
+        </div>
+        <div>
+            <div class="card-side">
+                <a href="home.html">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <p>Beranda</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="home.html#menu">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                    <p>Menu</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="keranjang.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <p>Keranjang</p>
+                
+                    <span class="cart-count">
+                        0
+                    </span>
+                </a>
+            </div>
+
+            <div class="card-side active">
+                <a href="#">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    <p>Pesanan Saya</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="riwayat.html">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <p>Riwayat Pesanan</p>
+                </a>
+            </div>
+
+            <div class="card-side">
+                <a href="topup.html">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <p>Top Up Saldo</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="LogOut">
+            <a href="index.html">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <p>Logout</p>
+            </a>
+        </div>
+    </div>
+
+    <nav>
+            <h1>Pesanan Saya</h1>
+
+            <div class="nav-2-1">
+
+                <div class="notif-wrapper">
+
+                    <ion-icon
+                    class="notif-btn"
+                    name="notifications-outline">
+                    </ion-icon>
+                
+                    <span class="notif-badge">
+                        0
+                    </span>
+                
+                    <div class="notif-popup">
+                    
+                        <div class="notif-header">
+                            <h3>Notifikasi</h3>
+                            <button onclick="hapusSemuaNotif()">
+                                Bersihkan
+                            </button>
+                        </div>
+
+                        <div class="notif-list"></div>
+                    
+                    </div>
+                
+                </div>
+
+
+                <div class="nav-2">
+
+                    <ion-icon name="wallet-outline"></ion-icon>
+
+                    <div>
+                        <p class="nav-2-p2">Saldo</p>
+                        <p class="nav-2-p1">Rp 0 </p>
+                    </div>
+                    
+                </div>
+            </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="container-pesanan">
+        
+            <div id="pesanan-container">
+            
+            </div>
+        
+        </div>
+    </div>
+
+    
+
+    <div class="bottom-nav">
+        <div class="card-side">
+            <a href="home.html">
+                <ion-icon name="home-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side">
+            <a href="home.html#menu">
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side-1">
+            <a href="keranjang.html">
+                <ion-icon name="cart-outline"></ion-icon>
+
+                <span class="cart-count">
+                    0
+                </span>
+            </a>
+        </div>
+
+        <div class="card-side active">
+            <a href="#">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+            </a>
+        </div>
+
+        <div class="card-side">
+            <a href="riwayat.html">
+                <ion-icon name="time-outline"></ion-icon>
+            </a>
+        </div>
+
+    </div>
+
+<script src="pesanan.js"></script>
+<script src="app.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

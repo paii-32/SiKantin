@@ -1,7 +1,5 @@
 
-// =======================
-// AMBIL DATA KERANJANG
-// =======================
+// ambil data keranjang
 
 let cart =
 JSON.parse(
@@ -14,9 +12,7 @@ document.getElementById(
 );
 
 
-// =======================
-// FORMAT RUPIAH
-// =======================
+// format rupiah
 
 function rupiah(nominal){
 
@@ -28,9 +24,7 @@ function rupiah(nominal){
 }
 
 
-// =======================
-// RENDER KERANJANG
-// =======================
+// render keranjang
 
 function renderCart(){
 
@@ -144,9 +138,7 @@ function renderCart(){
 }
 
 
-// =======================
-// TAMBAH QTY
-// =======================
+// tambah qy
 
 function tambah(index){
 
@@ -157,9 +149,7 @@ function tambah(index){
 }
 
 
-// =======================
-// KURANG QTY
-// =======================
+// kurang qy
 
 function kurang(index){
 
@@ -176,9 +166,7 @@ function kurang(index){
 }
 
 
-// =======================
-// SIMPAN
-// =======================
+// simpan
 
 function simpan(){
 
@@ -201,9 +189,7 @@ function simpan(){
 }
 
 
-// =======================
-// CHECKOUT
-// =======================
+// CO
 
 function prosesCheckout(){
 
@@ -229,9 +215,7 @@ function prosesCheckout(){
 }
 
 
-// =======================
-// LOAD
-// =======================
+// load
 
 renderCart();
 

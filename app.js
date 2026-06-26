@@ -1,6 +1,6 @@
-// =======================
-// INISIALISASI
-// =======================
+// instalasi
+
+const BATAS_SESI = 5;
 
 if (!localStorage.getItem("saldo")) {
     localStorage.setItem("saldo", 120000);
@@ -26,17 +26,15 @@ if (!localStorage.getItem("antrian")) {
     localStorage.setItem("antrian", 1);
 }
 
-// =======================
-// FORMAT RUPIAH
-// =======================
+
+// format rp
 
 function rupiah(angka) {
     return "Rp " + angka.toLocaleString("id-ID");
 }
 
-// =======================
-// UPDATE SALDO
-// =======================
+
+// update saldo
 
 function updateSaldo() {
 
@@ -57,9 +55,9 @@ function updateSaldo() {
 
 updateSaldo();
 
-// =======================
-// BADGE KERANJANG
-// =======================
+
+
+// keranjang
 
 function updateCartBadge() {
 
@@ -83,9 +81,9 @@ function updateCartBadge() {
 
 }
 
-// =======================
-// TAMBAH KE KERANJANG
-// =======================
+
+
+// tambah keranjang
 
 const tombolKeranjang =
 document.querySelectorAll(".keranjang");
@@ -124,17 +122,17 @@ tombolKeranjang.forEach(btn => {
 
 });
 
-// =======================
-// GENERATE KODE
-// =======================
+
+
+
+// kode
 
 function generateKode() {
     return "SK" + Math.floor(1000 + Math.random() * 9000);
 }
 
-// =======================
-// TAMBAH NOTIFIKASI
-// =======================
+
+// notif
 
 function tambahNotifikasi(text) {
 
@@ -152,9 +150,9 @@ function tambahNotifikasi(text) {
     renderNotifPopup();
 }
 
-// =======================
-// CHECKOUT
-// =======================
+
+
+// CO
 
 function checkout(metode) {
 
@@ -185,27 +183,36 @@ function checkout(metode) {
 
     const sekarang = new Date();
 
+    const dibuatPada = Date.now();
+    const selesaiPada = dibuatPada + 12 * 60 * 1000;
+    
     const batas =
         new Date(sekarang.getTime() + 30 * 60000);
 
     const kode = generateKode();
 
     let nomorAntrian =
-        Number(localStorage.getItem("antrian"));
+    Number(localStorage.getItem("antrian"));
+
+    let sesi = Math.ceil(nomorAntrian / BATAS_SESI);
 
     localStorage.setItem("antrian", nomorAntrian + 1);
 
     let pesanan =
         JSON.parse(localStorage.getItem("pesanan")) || [];
 
+
     pesanan.unshift({
         kode,
+        antrian: nomorAntrian,
+        sesi: sesi,
         metode,
         total,
         status: "Diproses",
         waktu: sekarang.toLocaleTimeString(),
         batas: batas.toLocaleTimeString(),
-        selesaiPada: Date.now() + 12 * 60000,
+        dibuatPada,
+        selesaiPada,
         item: cart
     });
 
@@ -222,9 +229,9 @@ function checkout(metode) {
     }, 300);
 }
 
-// =======================
-// UPDATE STATUS PESANAN
-// =======================
+
+
+// update status pesanan
 
 function updateStatusPesanan() {
 
@@ -283,10 +290,10 @@ function updateStatusPesanan() {
 
 setInterval(updateStatusPesanan, 1000);
 
-// =======================
-// NOTIF POPUP
-// =======================
 
+
+
+// notif popup
 const notifBtns =
 document.querySelectorAll(".notif-btn");
 
@@ -379,9 +386,9 @@ function renderNotifPopup() {
 
 renderNotifPopup();
 
-// =======================
-// CLOSE POPUP
-// =======================
+
+
+// close popup
 
 document.addEventListener(
 "click",
@@ -397,9 +404,9 @@ document.addEventListener(
 
 });
 
-// =======================
-// HAPUS NOTIF
-// =======================
+
+
+// hapus notif
 
 function hapusSemuaNotif() {
 

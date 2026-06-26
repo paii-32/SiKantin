@@ -1,29 +1,23 @@
 
-// =======================
-// FORMAT RUPIAH
-// =======================
+// format rupiah
 
 function rupiah(n){
     return "Rp " + n.toLocaleString("id-ID");
 }
 
-// =======================
-// AMBIL CONTAINER
-// =======================
+// ambil container
 
 const container =
 document.getElementById("pesanan-container");
 
-// =======================
-// AMBIL DATA
-// =======================
+
+// ambil data
 
 let pesanan =
 JSON.parse(localStorage.getItem("pesanan")) || [];
 
-// =======================
-// FORMAT COUNTDOWN
-// =======================
+
+//  format countdown
 
 function formatCountdown(ms){
 
@@ -38,20 +32,26 @@ function formatCountdown(ms){
            String(detik).padStart(2,"0");
 }
 
-// =======================
-// UPDATE STATUS (BERDASARKAN PROGRESS)
-// =======================
+
+
+// update status berdasarkan progres
 
 function updateStatus(){
 
     let berubah = false;
 
-    pesanan.forEach(p=>{
+    pesanan.forEach(p => {
+
+        if (!p.dibuatPada || !p.selesaiPada) return;
 
         const totalWaktu = p.selesaiPada - p.dibuatPada;
         const sisa = p.selesaiPada - Date.now();
+        
+
 
         let progress = 1 - (sisa / totalWaktu);
+
+
 
         if(progress < 0) progress = 0;
         if(progress > 1) progress = 1;
@@ -81,9 +81,7 @@ function updateStatus(){
     }
 }
 
-// =======================
-// REALTIME RENDER
-// =======================
+// realtime render
 
 function updateRealtime(){
 
@@ -107,7 +105,8 @@ function updateRealtime(){
 
     pesanan.forEach((p,index)=>{
 
-        const totalWaktu = p.selesaiPada - p.dibuatPada;
+        if (!p.dibuatPada || !p.selesaiPada) return;
+
         let sisa = p.selesaiPada - Date.now();
 
         if(sisa < 0) sisa = 0;
@@ -157,6 +156,11 @@ function updateRealtime(){
                     <b>${p.batas}</b>
                 </p>
 
+                <p>
+                    Sesi Ambil :
+                    <b>${p.sesi}</b>
+                </p>
+
             </div>
 
             <div class="menu-pesanan">
@@ -177,9 +181,9 @@ function updateRealtime(){
     });
 }
 
-// =======================
-// SELESAIKAN PESANAN
-// =======================
+
+
+// selesaikan pesanan
 
 function selesaikan(index){
 
@@ -210,9 +214,7 @@ function selesaikan(index){
     alert("Pesanan selesai");
 }
 
-// =======================
-// LOOP SYSTEM (REALTIME)
-// =======================
+// loop sistem realtime
 
 updateRealtime();
 

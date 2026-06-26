@@ -1,6 +1,4 @@
-// =======================
-// SLIDER DESKTOP
-// =======================
+// slider dekstop
 
 const slides = document.querySelector(".slides");
 const dots = document.querySelectorAll(".dot");
@@ -41,9 +39,7 @@ if (slides && dots.length > 0) {
 }
 
 
-// =======================
-// SLIDER MOBILE
-// =======================
+// slider mobile
 
 const slidesMobile =
 document.querySelector(".slides-mobile");
@@ -94,9 +90,7 @@ if (
 }
 
 
-// =======================
-// SEARCH MENU
-// =======================
+// search menu
 
 const searchInputs =
 document.querySelectorAll(".search-menu");
@@ -172,9 +166,8 @@ searchInputs.forEach(input => {
 });
 
 
-// =======================
-// SIDEBAR ACTIVE
-// =======================
+
+// sidebar activ
 
 const sections =
 document.querySelectorAll(

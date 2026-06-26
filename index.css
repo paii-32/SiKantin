@@ -206,174 +206,107 @@ footer span {
 
 
 
-@media (max-width: 768px) {
-    .container-login {
-    min-height: 100vh;
-    margin: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+@media (max-width:768px){
 
-.card-login {
-    border: 2px solid red;
-    border-radius: 30px;
-    padding: 30px;
-    position: relative;
-    width: 370px;
-}
-
-.logo-login {
-    position: absolute;
-    top: -60px;
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 99;
-}
-
-.logo-login img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 5px solid white;
-}
-
-.SiKantin {
-    text-align: center;
-    margin: 35px 0 5px;
-    color: #C78A1D;
-    font-size: 40px;
-}
-
-.p-sikantin {
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #94a3b8;
-}
-
-
-.slmt-dtng {
-    margin-top: 20px;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #1f1f1f;
-    font-size: 24px;
-}
-
-.p-slmt {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 12px;
-    color: grey;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-
-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    flex-direction: column;
-    gap: 20px;
-    gap: 30px;
-}
-
-.email p {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 4px;
-}
-
-.email input {
-    border: 1px solid rgb(218, 170, 170);
-    border-radius: 10px;
-    padding:12px 45px 12px 45px;
-    width: 320px;
-}
-
-.email-1,
-.password-1 {
-    position: relative;
-}
-
-.email-1 ion-icon,
-.password-1 ion-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    color: #888;
-    font-size: 20px;
-}
-
-
-.email input:focus,
-.password input:focus {
-    outline: none;
-    border: 1.5px solid rgb(185, 5, 5);
-}
-
-.password-1 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.password p {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 4px;
-}
-
-.password input {
-    border: 1px solid rgb(218, 170, 170);
-    border-radius: 10px;
-    padding:12px 45px 12px 45px;
-    width: 320px;
-}
-
-.password-1 .eye{
-    position:absolute;
-    right:15px;
-    left:auto;
-    top:50%;
-    transform:translateY(-50%);
-    cursor:pointer;
-}
-
-.eye{
-    cursor:pointer;
-    font-size:22px;
-    color:#888;
-}
-
-.btn-login button {
-    border-radius: 10px;
-    border: none;
-    padding: 12px;
-    width: 320px;
-    background-color: rgb(184, 3, 3);
-    cursor: pointer;
-}
-
-.btn-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    color: white;
-}
-
-.btn-text ion-icon {
-    font-size: 25px;
-}
+    body{
+        background:#f8f8f8;
+    }
+    
+    .container-login{
+        min-height:100vh;
+        margin:0;
+        padding:30px 20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+    }
+    
+    
+    .logo-login img{
+        width:90px;
+        height:90px;
+        border-radius:22px;
+    }
+    
+    .SiKantin{
+        font-size:34px;
+        margin-top:18px;
+    }
+    
+    .p-sikantin{
+        font-size:10px;
+        letter-spacing:2px;
+        margin-top:5px;
+    }
+    
+    .card-login{
+        width:100%;
+        max-width:400px;
+        margin-top:25px;
+        background:white;
+        border:none;
+        border-radius:28px;
+        border: 1px solid red;
+        padding:28px 22px;
+    }
+    
+    
+    .slmt-dtng{
+        margin-top:0;
+        font-size:26px;
+    }
+    
+    .p-slmt{
+        font-size:13px;
+        line-height:22px;
+        margin:10px 0 25px;
+    }
+    
+    
+    form{
+        width:100%;
+        gap:22px;
+    }
+    
+    .email,
+    .password{
+        width:100%;
+    }
+    
+    .email input,
+    .password input{
+        width:100%;
+        padding:14px 45px;
+        font-size:15px;
+    }
+    
+    
+    .btn-login{
+        width:100%;
+    }
+    
+    .btn-login button{
+        width:100%;
+        height:52px;
+        border-radius:15px;
+        font-size:16px;
+        transition:.3s;
+    }
+    
+    .btn-login button:active{
+        transform:scale(.98);
+    }
+    
+    
+    footer{
+        margin-top:25px;
+        gap:10px;
+        font-size:14px;
+    }
+    
+    footer img{
+        width:28px;
+        height:28px;
+    }
 }

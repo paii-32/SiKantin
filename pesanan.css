@@ -98,5 +98,13 @@ h1 {
         font-family: 'Times New Roman', Times, serif;
     }
 
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px !important;
+        margin-top: 60px !important;
+    }
+
 }
 
